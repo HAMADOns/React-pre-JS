@@ -12,3 +12,15 @@ init('JavaScript - Template Literals')
 
 // 🐶 affiche le liblélé “Le nombre le plus grand entre 5 10 200 est 200 !”
 // à l'écran avec 'displayText'
+
+const cinq = 5,
+  dix = 10,
+  deuxcent = 200
+
+displayText(
+  `Le nombre le plus grand entre ${cinq}, ${dix} et ${deuxcent} est ${Math.max(
+    cinq,
+    dix,
+    deuxcent,
+  )}`,
+)
