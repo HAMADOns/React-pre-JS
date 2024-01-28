@@ -81,5 +81,5 @@ displayText(`Tous les ids ${computers.map(computer => computer.id)}`)
 
 displayText(`Les pc avec webcam : ${computers.filter(computer => computer.features.includes('webcam'))} `)
 console.log(
-  computers.filter(computer => computer.features.includes('webcam').id)
+  computers.filter(computer => computer.features.includes('webcam'))
 );
