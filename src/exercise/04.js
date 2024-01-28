@@ -12,3 +12,10 @@ init('Fonctions fléchées')
 
 // 🐶 appelle la fonction calculEnergie avec 5 grammes (0.005 kg)
 // et affiche le résultat à l'ecran avec displayText
+
+function calculEnergie(masse, celerite=300000000) {
+   
+    displayText(`L'énergie d'une masse de ${masse} kg et de ${celerite} joules est ${masse*Math.pow(celerite,2)}`)
+}
+
+ calculEnergie(5)
