@@ -55,22 +55,33 @@ let computer2 = () => {
   }
 }
 computer2()
- 
+
 displayText(
   `Mon ordinateur préferé est le ${
-    computers.find(computere => computere.name === 'MacBook Pro').name
+    computers.find(
+      (computere) /*paramètre de la fonction */ =>
+        computere.name === 'MacBook Pro',
+    ).name
   }`,
 )
 
 // 🐶 Code ce qui permet de savoir s'il il y a au moins un ssd-500go
 // 🤖 en passant par la méthode `some`
 
-displayText(`Y a t-il au moins un pc avec un ssd-500go ? : ${computers.some(computer => computer.features.includes('ssd-1to'))} `)
+displayText(
+  `Y a t-il au moins un pc avec un ssd-500go ? : ${computers.some(computer =>
+    computer.features.includes('ssd-1to'),
+  )} `,
+)
 
 // 🐶 Code ce qui permet de savoir s'il il y a que des ssd-500go
 // 🤖 en passant par la méthode `every`
 
-displayText(`Tous les pc ont un ssd-500go ? : ${computers.every(computer => computer.features.includes('ssd-500go'))}`)
+displayText(
+  `Tous les pc ont un ssd-500go ? : ${computers.every(computer =>
+    computer.features.includes('ssd-500go'),
+  )}`,
+)
 
 // 🐶 Affiche la liste des ids
 // 🤖 en passant par la méthode `map`
@@ -79,7 +90,5 @@ displayText(`Tous les ids ${computers.map(computer => computer.id)}`)
 // 🐶 Récuperer la liste des pc avec une webcam
 // 🤖 en passant par la méthode `filter`
 
-displayText(`Les pc avec webcam : ${computers.filter(computer => computer.features.includes('webcam'))} `)
-console.log(
-  computers.filter(computer => computer.features.includes('webcam'))
-);
+const web = computers.filter(computer => computer.features.includes('webcam'))
+displayText(`Les pc avec webcam : ${web.map(computer => computer.name)} `)
