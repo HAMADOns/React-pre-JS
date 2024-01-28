@@ -18,7 +18,9 @@ const cinq = 5,
   deuxcent = 200
 
 displayText(
-  `Le nombre le plus grand entre ${cinq}, ${dix} et ${deuxcent} est ${Math.max(
+  `Le nombre le plus grand
+   entre ${cinq} ${dix} et ${deuxcent} 
+   est ${Math.max(
     cinq,
     dix,
     deuxcent,
