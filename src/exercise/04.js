@@ -15,18 +15,18 @@ init('Fonctions fléchées')
 
 function calculEnergie(masse, celerite = 300000000) {
   displayText(
-    `L'énergie d'une masse de ${masse} kg et de ${celerite} joules est ${
-      masse * Math.pow(celerite, 2)
-    }`,
+    `L'énergie d'une masse de ${masse} kg et de ${celerite} joules est ${Math.round(
+      masse * Math.pow(celerite, 2),
+    )}`,
   )
 }
 
 const calculEnergie2 = (masse, celerite = 300000000) => {
   displayText(
-    `L'énergie d'une masse de ${masse} kg et de ${celerite} joules est ${
-      masse * Math.pow(celerite, 2)
-    }`,
+    `L'énergie d'une masse de ${masse} kg et de ${celerite} joules est ${Math.round(
+      masse * Math.pow(celerite, 2),
+    )}`,
   )
 }
-calculEnergie(5)
-calculEnergie2(5)
+calculEnergie(0.5)
+calculEnergie2(0.5)
