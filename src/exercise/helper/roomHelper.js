@@ -6,3 +6,11 @@
 
 // 🐶 créé une constante `TEMP_MAX` = 60 qui sera exportée
 // 🤖 export const
+
+export default function calculAir(longueur, largeur) {
+  return longueur * largeur
+}
+export function calculPerimetre(longueur, largeur) {
+  return (longueur + largeur) * 2
+}
+export const TEMP_MAX = 60

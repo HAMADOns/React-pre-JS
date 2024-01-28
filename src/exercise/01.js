@@ -16,4 +16,16 @@
 
 // 🐶 Utilise ces 3 fonctions pour créér les bons libéllés
 // 🤖 let lib = "Air de d'un pièce de 2 par 5 donne " + ...
-// Utilise displayText pour afficher ces 3 libéllés 
+// Utilise displayText pour afficher ces 3 libéllés
+
+import displayText, {init} from './helper/exerciseHelper'
+import toto, {calculPerimetre as perimetre, TEMP_MAX} from './helper/roomHelper' //toto ou calculAir
+
+init('Exercice1')
+displayText('Hello ALL')
+
+let res = toto(2, 5)
+displayText('Air = ' + res)
+res = perimetre(2, 5)
+displayText('Perimetre = ' + res)
+displayText('la temp = ' + TEMP_MAX)
