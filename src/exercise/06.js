@@ -40,23 +40,46 @@ const computers = [
 // `Mon ordinateur préferé est le MacBook Pro`
 // 🤖 en passant par la méthode find
 
-displayText(`Mon ordinateur préferé est le`)
+function computer() {
+  for (let i = 0; i < computers.length; i++) {
+    if (computers[i].name === 'MacBook Pro') displayText(computers[i].name)
+  }
+}
+computer()
+
+let computer2 = () => {
+  for (let i = 0; i < computers.length; i++) {
+    return computers[i].name === 'MacBook Pro'
+      ? displayText(computers[i].name)
+      : displayText('PAS')
+  }
+}
+computer2()
+ 
+displayText(
+  `Mon ordinateur préferé est le ${
+    computers.find(computere => computere.name === 'MacBook Pro').name
+  }`,
+)
 
 // 🐶 Code ce qui permet de savoir s'il il y a au moins un ssd-500go
 // 🤖 en passant par la méthode `some`
 
-displayText(`Y a t-il au moins un pc avec un ssd-500go ? :  `)
+displayText(`Y a t-il au moins un pc avec un ssd-500go ? : ${computers.some(computer => computer.features.includes('ssd-1to'))} `)
 
 // 🐶 Code ce qui permet de savoir s'il il y a que des ssd-500go
 // 🤖 en passant par la méthode `every`
 
-displayText(`Tous les pc ont un ssd-500go ? : `)
+displayText(`Tous les pc ont un ssd-500go ? : ${computers.every(computer => computer.features.includes('ssd-500go'))}`)
 
 // 🐶 Affiche la liste des ids
 // 🤖 en passant par la méthode `map`
-displayText(`Tous les ids `)
+displayText(`Tous les ids ${computers.map(computer => computer.id)}`)
 
 // 🐶 Récuperer la liste des pc avec une webcam
 // 🤖 en passant par la méthode `filter`
 
-displayText(`Les pc avec webcam : `)
+displayText(`Les pc avec webcam : ${computers.filter(computer => computer.features.includes('webcam'))} `)
+console.log(
+  computers.filter(computer => computer.features.includes('webcam').id)
+);
