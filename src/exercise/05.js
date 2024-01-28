@@ -45,6 +45,6 @@ checkCountryCode2(personne)
 // utilise le Nullish coalishing
 // 🤖 let nameSafe = name ?? "anonyme"
 const getPaysOrDefault = personne => {
-  return personne?.adresse?.pays ?? {nom: "France", countryCode : "FR"}
+  return personne.adresse.pays ?? {nom: "France", countryCode : "FR"}
 }
 displayText(`Le pays est ${getPaysOrDefault(personne).nom}`)
