@@ -19,3 +19,12 @@ const type = 'footbal'
 // 🐶 affiche avec `displayText` : "La surface du terrain de footbal/basket est x m² "
 
 // 🐶 Appelle cette fonction avec le terrain de footbal puis de basket
+
+let terrainFoot = {longueur, largeur, type}
+let terrainBasket = {longueur: 28, largeur: 15, type: 'Basketball'}
+function calculAir({longueur, largeur, type}) {
+  displayText(`la surface d'un terrain de ${type} de longueur ${longueur} 
+    et largeur ${largeur} est de ${(largeur * longueur)} m²`)
+}
+calculAir(terrainFoot)
+calculAir(terrainBasket)
