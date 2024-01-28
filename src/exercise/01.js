@@ -16,4 +16,4 @@
 
 // 🐶 Utilise ces 3 fonctions pour créér les bons libéllés
 // 🤖 let lib = "Air de d'un pièce de 2 par 5 donne " + ...
-// Utilise displayText pour afficher ces 3 libéllés
+// Utilise displayText pour afficher ces 3 libéllés 
